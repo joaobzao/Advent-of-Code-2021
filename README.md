@@ -2,7 +2,7 @@
 
 Welcome to the Advent of Code[^aoc]
 
-In this repository I'm about to provide solutions for the puzzles using [Kotlin][kotlin] or Swift language. 
+In this repository I'm about to provide solutions for the puzzles either using Kotlin or Swift or both. 
 
 Disclaimer - Not sure how many puzzles I'll have time to do this year 😅
 
