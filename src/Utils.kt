@@ -1,23 +1,21 @@
 import java.io.File
-import java.math.BigInteger
-import java.security.MessageDigest
+
+enum class Day(val description: String) {
+    ONE("day01"),
+    TWO("day02")
+}
 
 /**
  * Reads lines from the given input txt file.
  */
-fun readInput(name: String) = File("src", "$name.txt").readLines()
-
-/**
- * Converts string to md5 hash.
- */
-fun String.md5(): String = BigInteger(1, MessageDigest.getInstance("MD5").digest(toByteArray())).toString(16)
+fun readInput(name: String, day: Day) = File("src/${day.description}", "$name.txt").readLines()
 
 /**
  * Converts list of ints into a list of strings
  */
-fun List<Int>.toStringList(): List<String> = this.map { it.toString() }
+fun List<Int>.toStringList(): List<String> = this.map(Int::toString)
 
 /**
  * Converts list of strings into a list of ints
  */
-fun List<String>.toIntList(): List<Int> = this.map { it.toInt() }
+fun List<String>.toIntList(): List<Int> = this.map(String::toInt)
