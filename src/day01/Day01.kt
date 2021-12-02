@@ -1,5 +1,7 @@
 package day01
 
+import day.Day
+import measure
 import readInput
 import toIntList
 
@@ -17,6 +19,9 @@ fun main() {
 
     // evaluate the official puzzle input
     val input = readInput(Day.ONE).toIntList()
-    println("Solution part 1 -> ${part1(input)}")
-    println("Solution part 2 -> ${part2(input)}")
+
+    measure {
+        println("Solution part 1 -> ${part1(input)}")
+        println("Solution part 2 -> ${part2(input)}")
+    }
 }

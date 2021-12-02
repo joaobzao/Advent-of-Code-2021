@@ -1,7 +1,8 @@
 package day02
 
+import day.Day
+import measure
 import readInput
-import toIntList
 
 fun main() {
     fun part1(input: List<String>): Int {
@@ -55,12 +56,4 @@ fun main() {
         println("Solution part 1 -> ${part1(input)}")
         println("Solution part 2 -> ${part2(input)}")
     }
-}
-
-fun measure(block: () -> Unit) {
-    val start = System.currentTimeMillis()
-
-    block()
-
-    println("Took ${System.currentTimeMillis() - start} milliseconds")
 }

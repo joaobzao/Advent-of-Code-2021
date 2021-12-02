@@ -1,11 +1,5 @@
+import day.Day
 import java.io.File
-
-enum class Day(val folder: String, val file: String) {
-    ONE("day01", "Day01"),
-    ONETEST("day01", "Day01_test"),
-    TWO("day02", "Day02"),
-    TWOTEST("day02", "Day02_test")
-}
 
 /**
  * Reads lines from the given input txt file.
@@ -21,3 +15,14 @@ fun List<Int>.toStringList(): List<String> = this.map(Int::toString)
  * Converts list of strings into a list of ints
  */
 fun List<String>.toIntList(): List<Int> = this.map(String::toInt)
+
+/**
+ * Prints the time of execution inside the block in milliseconds
+ */
+fun measure(block: () -> Unit) {
+    val start = System.currentTimeMillis()
+
+    block()
+
+    println("Took ${System.currentTimeMillis() - start} milliseconds")
+}
