@@ -20,6 +20,7 @@ fun main() {
     // evaluate the official puzzle input
     val input = readInput(Day.ONE).toIntList()
 
+    // This measure lambda is just outputting the time of execution
     measure {
         println("Solution part 1 -> ${part1(input)}")
         println("Solution part 2 -> ${part2(input)}")
