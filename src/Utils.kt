@@ -1,14 +1,14 @@
 import java.io.File
 
-enum class Day(val description: String) {
-    ONE("day01"),
-    TWO("day02")
+enum class Day(val folder: String, val file: String) {
+    ONE("day01", "Day01"),
+    ONETEST("day01", "Day01_test"),
 }
 
 /**
  * Reads lines from the given input txt file.
  */
-fun readInput(name: String, day: Day) = File("src/${day.description}", "$name.txt").readLines()
+fun readInput(day: Day) = File("src/${day.folder}", "${day.file}.txt").readLines()
 
 /**
  * Converts list of ints into a list of strings
