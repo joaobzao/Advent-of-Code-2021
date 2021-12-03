@@ -16,11 +16,15 @@ fun main() {
                 bitMaxCount.toString()
             }
 
-
         return gamma.toInt(2) * gamma.invertBinaryString().toInt(2)
     }
 
     fun part2(input: List<String>): Int {
+        val bitColumnIndexes = input.first().indices
+        val bitCountByColumn = bitColumnIndexes.map { index -> input.groupingBy { it[index] }.eachCount() }
+
+        println(bitCountByColumn)
+        println(input.filter { it[0] == '1' })
 
         return 1
     }
