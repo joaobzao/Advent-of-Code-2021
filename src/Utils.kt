@@ -26,3 +26,8 @@ fun measure(block: () -> Unit) {
 
     println("Took ${System.currentTimeMillis() - start} milliseconds")
 }
+
+/**
+ * Inverts each bit of the given binary string
+ */
+fun String.invertBinaryString(): String = this.map { if (it == '0') '1' else '0' }.joinToString("")
