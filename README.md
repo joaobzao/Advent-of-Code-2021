@@ -6,6 +6,10 @@ In this repository I'm about to provide solutions for the puzzles either using K
 
 Disclaimer - Not sure how many puzzles I'll have time to do this year 😅
 
+## Tools
+
+* Intellij IDEA 2021.3
+* Kotlin 1.5.10
 
 [^aoc]:
     [Advent of Code][aoc] – An annual event of Christmas-oriented programming challenges started December 2015.
